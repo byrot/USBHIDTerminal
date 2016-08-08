@@ -86,7 +86,7 @@ public class USBHIDService extends AbstractUSBHIDService {
 				stringBuilder.append(delimiter).append(String.valueOf(USBUtils.toInt(buffer[i])));
 			}
 		} else if (receiveDataFormat.equals(Consts.HEXADECIMAL)) {
-			for (; i < buffer.length && buffer[i] != 0; i++) {
+			for (; i < buffer.length && i < 64; i++) {
 				stringBuilder.append(delimiter).append(Integer.toHexString(buffer[i]));
 			}
 		} else if (receiveDataFormat.equals(Consts.TEXT)) {
