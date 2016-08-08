@@ -166,7 +166,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
+		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.HEXADECIMAL);
 		prepareServices();
 		setDelimiter();
 		eventBus.register(this);
@@ -186,7 +186,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	}
 
 	private void setSelectedMenuItemsFromSettings(Menu menu) {
-		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
+		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.HEXADECIMAL);
 		if (receiveDataFormat != null) {
 			if (receiveDataFormat.equals(Consts.BINARY)) {
 				menu.findItem(R.id.menuSettingsReceiveBinary).setChecked(true);
@@ -241,7 +241,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			break;
 		}
 
-		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
+		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.HEXADECIMAL);
 		setDelimiter();
 		return true;
 	}
