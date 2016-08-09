@@ -3,7 +3,7 @@
     <CheckBoxPreference
         android:key="enable_web_server"
         android:title="@string/pref_title_web_server"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
     <CheckBoxPreference
         android:key="enable_socket_server"
         android:title="@string/pref_title_socket_server"
