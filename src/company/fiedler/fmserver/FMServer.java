@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal;
+package company.fiedler.fmserver;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,23 +17,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-import com.appspot.usbhidterminal.core.Consts;
-import com.appspot.usbhidterminal.core.events.DeviceAttachedEvent;
-import com.appspot.usbhidterminal.core.events.DeviceDetachedEvent;
-import com.appspot.usbhidterminal.core.events.LogMessageEvent;
-import com.appspot.usbhidterminal.core.events.PrepareDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.SelectDeviceEvent;
-import com.appspot.usbhidterminal.core.events.ShowDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.USBDataReceiveEvent;
-import com.appspot.usbhidterminal.core.events.USBDataSendEvent;
-import com.appspot.usbhidterminal.core.services.SocketService;
-import com.appspot.usbhidterminal.core.services.USBHIDService;
-import com.appspot.usbhidterminal.core.services.WebServerService;
+import company.fiedler.fmserver.core.Consts;
+import company.fiedler.fmserver.core.events.DeviceAttachedEvent;
+import company.fiedler.fmserver.core.events.DeviceDetachedEvent;
+import company.fiedler.fmserver.core.events.LogMessageEvent;
+import company.fiedler.fmserver.core.events.PrepareDevicesListEvent;
+import company.fiedler.fmserver.core.events.SelectDeviceEvent;
+import company.fiedler.fmserver.core.events.ShowDevicesListEvent;
+import company.fiedler.fmserver.core.events.USBDataReceiveEvent;
+import company.fiedler.fmserver.core.events.USBDataSendEvent;
+import company.fiedler.fmserver.core.services.SocketService;
+import company.fiedler.fmserver.core.services.USBHIDService;
+import company.fiedler.fmserver.core.services.WebServerService;
 
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.EventBusException;
 
-public class USBHIDTerminal extends Activity implements View.OnClickListener {
+public class FMServer extends Activity implements View.OnClickListener {
 
 	private SharedPreferences sharedPreferences;
 

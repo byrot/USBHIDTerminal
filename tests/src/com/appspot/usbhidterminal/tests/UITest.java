@@ -1,13 +1,13 @@
-package com.appspot.usbhidterminal.tests;
+package company.fiedler.fmserver.tests;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.appspot.usbhidterminal.USBHIDTerminal;
+import company.fiedler.fmserver.FMServer;
 
-public class UITest extends ActivityInstrumentationTestCase2<USBHIDTerminal> {
+public class UITest extends ActivityInstrumentationTestCase2<FMServer> {
 
 	public UITest(){
-		super(USBHIDTerminal.class);
+		super(FMServer.class);
 	}
 
 	//@Test

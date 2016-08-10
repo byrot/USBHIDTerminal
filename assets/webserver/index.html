@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>USB HID Terminal</title>
+    <title>FM Server Terminal</title>
     <script src="lib/codemirror-compressed.js"></script>
     <link rel="stylesheet" href="css/codemirror.css">
     <link rel="stylesheet" href="css/show-hint.css">
@@ -45,7 +45,7 @@
       function init() {
         btnConnect = document.getElementById("connect");
         output = document.getElementById("log");
-        writeToScreen('USBHIDTerminal initialized');
+        writeToScreen('FMServer initialized');
         connectToWebSocket();
         editor = CodeMirror.fromTextArea(document.getElementById("javaScriptCode"), {
           lineNumbers: true,
@@ -166,7 +166,7 @@
 </head>
 <br>
 <header>
-    <h2>USB HID Terminal 1.1.1</h2>
+    <h2>FM Server Terminal</h2>
 </header>
 Your custom JavaScript code (F11, CTRL+SPACE, CTRL+D, CTRL+Q):
 <br/>
@@ -200,7 +200,6 @@ ping: <output id="pingOut"></output>
 <br/>
 <footer>
     <p>Web UI - Beta version</p>
-    <a href="https://github.com/452/USBHIDTerminal" target="_blank">GitHub</a>
 </footer>
 </body>
 </html>

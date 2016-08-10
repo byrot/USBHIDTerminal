@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core.events;
+package company.fiedler.fmserver.core.events;
 
 public class USBDataReceiveEvent {
     private final String data;

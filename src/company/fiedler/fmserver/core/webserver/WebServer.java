@@ -1,10 +1,10 @@
-package com.appspot.usbhidterminal.core.webserver;
+package company.fiedler.fmserver.core.webserver;
 
 import android.content.res.AssetManager;
 import android.util.Log;
 
-import com.appspot.usbhidterminal.core.events.USBDataReceiveEvent;
-import com.appspot.usbhidterminal.core.events.USBDataSendEvent;
+import company.fiedler.fmserver.core.events.USBDataReceiveEvent;
+import company.fiedler.fmserver.core.events.USBDataSendEvent;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal;
+package company.fiedler.fmserver;
 
 import android.annotation.TargetApi;
 import android.content.Context;

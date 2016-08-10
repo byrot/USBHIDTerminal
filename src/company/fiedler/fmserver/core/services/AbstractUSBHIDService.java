@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core.services;
+package company.fiedler.fmserver.core.services;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,14 +19,14 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.appspot.usbhidterminal.core.Consts;
-import com.appspot.usbhidterminal.core.USBUtils;
-import com.appspot.usbhidterminal.core.events.DeviceAttachedEvent;
-import com.appspot.usbhidterminal.core.events.DeviceDetachedEvent;
-import com.appspot.usbhidterminal.core.events.PrepareDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.SelectDeviceEvent;
-import com.appspot.usbhidterminal.core.events.ShowDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.USBDataSendEvent;
+import company.fiedler.fmserver.core.Consts;
+import company.fiedler.fmserver.core.USBUtils;
+import company.fiedler.fmserver.core.events.DeviceAttachedEvent;
+import company.fiedler.fmserver.core.events.DeviceDetachedEvent;
+import company.fiedler.fmserver.core.events.PrepareDevicesListEvent;
+import company.fiedler.fmserver.core.events.SelectDeviceEvent;
+import company.fiedler.fmserver.core.events.ShowDevicesListEvent;
+import company.fiedler.fmserver.core.events.USBDataSendEvent;
 import de.greenrobot.event.EventBus;
 
 public abstract class AbstractUSBHIDService extends Service {

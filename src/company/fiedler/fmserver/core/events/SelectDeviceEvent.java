@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core.events;
+package company.fiedler.fmserver.core.events;
 
 public class SelectDeviceEvent {
     private int device;

@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core;
+package company.fiedler.fmserver.core;
 
 public abstract class Consts {
 	public static final String BINARY = "binary";
