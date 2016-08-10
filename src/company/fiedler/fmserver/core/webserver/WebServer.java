@@ -27,11 +27,13 @@ public class WebServer extends NanoHTTPD {
     private static final String MIME_JSON = "application/json";
     private AssetManager assetManager;
     private WebSocketResponseHandler responseHandler;
+    private EventBus eventBus = EventBus.getDefault();
 
     public WebServer(AssetManager assetManager, int port) {
         super(port);
         this.assetManager = assetManager;
         responseHandler = new WebSocketResponseHandler(webSocketFactory);
+		eventBus.register(this);
     }
 
     @Override
@@ -46,6 +48,10 @@ public class WebServer extends NanoHTTPD {
                 case "/":
                     uri = "/index.html";
                     break;
+				case "/status":
+					response.setMimeType(MIME_JSON);
+					createPostMessage("#81 #7e #0d #12 #0b #47 #45 #54 #3d #50 #52 #4d #2f #49 #44 #54 #7d #5d #d3 #7e #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00 #00");
+					return response;
             }
             if (uri.endsWith(".js")) {
                 mimeType = MIME_JAVASCRIPT;
@@ -73,6 +79,10 @@ public class WebServer extends NanoHTTPD {
     public void stop(){
         super.stop();
     }
+
+	private void createPostMessage(String message) {
+		EventBus.getDefault().post(new USBDataSendEvent(message));
+	}
 
     private InputStream openPage(String file) {
         InputStream is;
